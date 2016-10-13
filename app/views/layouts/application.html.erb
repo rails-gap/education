@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Edupor</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= content_for?(:page_title) ? (yield :page_title) : 'EDU-PORTAL' %></title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= yield(:css_include) %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield(:js_include) %>
+  </head>
+  <body>
+    <%= render 'shared/messages', flash: flash %>
+    <%= render 'shared/navbar' %>
+    <div class="page">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
+  </body>
 </html>

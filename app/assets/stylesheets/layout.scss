@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #FFF;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: $blue;
+  text-decoration: none;
+}
+
+div.page {
+  background-color: #FFF;
+  min-height: 100%;
+}
+
+div.breadcrumbs {
+  margin: 10px 0px;
+}
+
+div.alert {
+  margin: 0px;
+}
+
+header.nav-header {
+  background-color: #FFF;
+}
+
+header.nav-header .logo {
+  border: 0px;
+  height: 100%;
+}
+
+header.nav-header .logo-text {
+  font-weight: 500;
+}
+
+header.nav-header .logo-red {
+  color: $blue;
+}
+
+header.nav-header .line {
+  background: url('bg_gradient.png');
+  height: 3px;
+  margin: 0px;
+}
+
+header.top {
+  text-align: center;
+  color: white;
+  background: url('bg_gradient_small.png');
+  background-size: cover;
+}
+
+header.top .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+header.top img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+header.top .intro-text .title {
+  display: block;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+header.top .intro-text .description {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+header.messages-header {
+  background-color: #FFF;
+  width: 100%;
+}
+
+footer.footer {
+  height: 100px;
+  color: #FFF;
+  background-color: $blue;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
