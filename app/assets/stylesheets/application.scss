@@ -1,15 +1,11 @@
 // Bootstrap
-@import "bootstrap-constants";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 // General
 @import "colors";
-@import "typography";
 @import "layout";
 @import "videos";
-
-// Site
 @import "home";
 
 // Jquery UI

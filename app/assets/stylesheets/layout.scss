@@ -1,96 +1,56 @@
 html, body {
   height: 100%;
 }
+div.page {
+  min-height: 100%;
+}
 
 body {
   background-color: #FFF;
 }
 
 a {
-  color: black;
+  color: #0079C2;
   text-decoration: none;
+  outline: 0 none;
+  &:focus, &:hover, &:active {
+    color: #4E9DFF;
+    text-decoration: none;
+    outline: 0 none;
+  }
 }
 
-a:hover, a:focus {
-  color: $blue;
-  text-decoration: none;
-}
-
-div.page {
-  background-color: #FFF;
-  min-height: 100%;
-}
-
-div.breadcrumbs {
-  margin: 10px 0px;
-}
-
+// Alerts
 div.alert {
   margin: 0px;
 }
 
-header.nav-header {
-  background-color: #FFF;
+// Header
+header.nav-header .navbar-brand {
+  height: 80px;
+}
+header.nav-header .nav > li > a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+header.nav-header .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+header.nav-header .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+header.nav-header .navbar-brand > img {
+  padding: 7px 14px;
 }
 
-header.nav-header .logo {
-  border: 0px;
-  height: 100%;
-}
-
-header.nav-header .logo-text {
-  font-weight: 500;
-}
-
-header.nav-header .logo-red {
-  color: $blue;
-}
-
-header.nav-header .line {
-  background: url('bg_gradient.png');
-  height: 3px;
-  margin: 0px;
-}
-
-header.top {
-  text-align: center;
-  color: white;
-  background: url('bg_gradient_small.png');
-  background-size: cover;
-}
-
-header.top .container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-header.top img {
-  display: block;
-  margin: 0 auto 10px;
-}
-
-header.top .intro-text .title {
-  display: block;
-  font-weight: 300;
-  font-size: 40px;
-}
-
-header.top .intro-text .description {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-header.messages-header {
-  background-color: #FFF;
-  width: 100%;
-}
-
+// Footer
 footer.footer {
   height: 100px;
   color: #FFF;
   background-color: $blue;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 45px;
+  margin-top: 20px;
 }
 
