@@ -1,0 +1,3 @@
+$("#videos-modal-content")
+  .html("<%= escape_javascript(render 'delete', video: @entity_object ) %>");
+$("#videos-modal").modal();

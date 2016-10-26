@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if user.errors.any? %>
+  <% user.errors.full_messages.each do |message| %>
+    $("div.errors").append($("<div class='alert alert-danger'/>").html("<%= message.html_safe %>"));
+  <% end %>
+<% else %>
+  $("#users-content").html("<%= escape_javascript(render 'index', users: users ) %>");
+  $("#users-modal").modal("hide");
+<% end %>

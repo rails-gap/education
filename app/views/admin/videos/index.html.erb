@@ -1,0 +1,23 @@
+<%= render 'admin/shared/header', selected: 'videos' %>
+
+<div class="container">
+  <h2>
+    <span>Videos</span>
+    <span>
+      <%= link_to new_admin_video_path, remote: true, class: 'btn btn-primary pull-right' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Video
+      <% end %>
+    </span>
+  </h2>
+
+  <div id="videos-content">
+    <%= render 'index', videos: @all_entity_objects %>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="videos-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div id="videos-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+</div>

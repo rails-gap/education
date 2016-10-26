@@ -1,0 +1,18 @@
+<%= render 'admin/shared/header', selected: 'users' %>
+
+<div class="container">
+  <h2>
+    <span>Users</span>
+  </h2>
+
+  <div id="users-content">
+    <%= render 'index', users: @users %>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="users-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div id="users-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+</div>

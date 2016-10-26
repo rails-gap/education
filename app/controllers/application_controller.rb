@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def admin_access?
+    redirect_to root_path, alert: 'Access denied.' unless current_user.admin?
+  end
+
 end

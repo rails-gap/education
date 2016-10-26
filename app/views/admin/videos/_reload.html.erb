@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if video.errors.any? %>
+  <% video.errors.full_messages.each do |message| %>
+    $("div.errors").append($("<div class='alert alert-danger'/>").html("<%= message.html_safe %>"));
+  <% end %>
+<% else %>
+  $("#videos-content").html("<%= escape_javascript(render 'index', videos: videos ) %>");
+  $("#videos-modal").modal("hide");
+<% end %>

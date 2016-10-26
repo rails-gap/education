@@ -3,5 +3,13 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :videos
+  resources :videos, only: [:index, :show]
+
+  namespace :admin do
+    resources :users, only: [:index, :edit, :update]
+    resources :videos do
+      get 'delete'
+    end
+  end
+
 end

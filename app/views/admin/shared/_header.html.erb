@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>ADMIN DASHBOARD</h1>
+
+  <ul class="nav nav-tabs">
+    <li role="presentation" class="<%= 'active' if selected == 'users' %>">
+      <%= link_to 'Users', admin_users_path %>
+    </li>
+    <li role="presentation" class="<%= 'active' if selected == 'videos' %>">
+      <%= link_to 'Videos', admin_videos_path %>
+    </li>
+  </ul>
+</div>
+

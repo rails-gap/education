@@ -1,0 +1,3 @@
+$("#videos-modal-content")
+  .html("<%= escape_javascript(render 'new', video: @entity_object, practices: @practices, users: @users) %>");
+$("#videos-modal").modal();

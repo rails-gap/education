@@ -1,0 +1,15 @@
+<% videos.in_groups_of(4) do |group| %>
+  <div class="row">
+    <% group.each do |video| %>
+      <% if video %>
+        <div class="col-sm-6 col-md-3">
+          <%= link_to video_path(video) do %>
+            <%= render 'video', video: video %>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
+
+<%= will_paginate videos, renderer: BootstrapPagination::Rails %>

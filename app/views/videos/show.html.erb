@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Videos</h1>
+
+  <div class="">
+    <span><%= @video.title %></span>
+    <span class="pull-right"><%= @video.year %></span>
+    <span class="pull-right"><%= @video.presenter %></span>
+  </div>
+
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="<%= @video.embedded_link %>" allowfullscreen></iframe>
+  </div>
+
+  <div>
+    <h4>About this video:</h4>
+    <div><%= @video.description %></div>
+    <div><%= @video.tags %></div>
+  </div>
+
+</div>
