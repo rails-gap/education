@@ -1,11 +1,9 @@
-<% videos.in_groups_of(4) do |group| %>
+<% videos.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.each do |video| %>
       <% if video %>
-        <div class="col-sm-6 col-md-3">
-          <%= link_to video_path(video) do %>
-            <%= render 'video', video: video %>
-          <% end %>
+        <div class="col-sm-4">
+          <%= render 'video', video: video %>
         </div>
       <% end %>
     <% end %>

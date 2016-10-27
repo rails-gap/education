@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  add_breadcrumb 'Videos', :videos_path
+
   before_action :authenticate_user!
 
   def index
@@ -7,6 +9,7 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.active.find(params[:id])
+    add_breadcrumb @video.title, video_path(@video)
   end
 
 end

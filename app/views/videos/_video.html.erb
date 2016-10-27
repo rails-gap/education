@@ -1,9 +1,16 @@
 <div class="video-box">
   <div class="video-thumbnail">
-    <%= image_tag(video.thumbnail, class: 'img-responsive img-rounded') %>
+    <%= link_to video_path(video) do %>
+      <%= image_tag(video.thumbnail, class: 'img-responsive img-rounded') %>
+    <% end %>
   </div>
   <div class="video-info">
-    <h4 class="video-title"><%= video.title %></h4>
+    <h4 class="video-title">
+      <%= link_to video_path(video) do %>
+        <%= video.title %>
+      <% end %>
+    </h4>
     <div class="video-presenter"><%= video.presenter %></div>
+    <div class="video-presenter"><%= video.year %></div>
   </div>
 </div>

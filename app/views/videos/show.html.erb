@@ -1,20 +1,36 @@
+
 <div class="container">
-  <h1>Videos</h1>
-
-  <div class="">
-    <span><%= @video.title %></span>
-    <span class="pull-right"><%= @video.year %></span>
-    <span class="pull-right"><%= @video.presenter %></span>
+  <div class="row">
+    <ol class="breadcrumb"><%= render_breadcrumbs tag: :li, separator: '' %></ol>
   </div>
 
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="<%= @video.embedded_link %>" allowfullscreen></iframe>
+  <div class="row">
+    <div class="col-md-12">
+      <h4>
+        <%= @video.title %>
+        <div class="pull-right">
+          <i class="glyphicon glyphicon-user"></i>
+          <span class="video-presenter"><%= @video.presenter %></span>
+          <i class="glyphicon glyphicon-calendar"></i>
+          <span><%= @video.year %></span>
+        </div>
+      </h4>
+    </div>
   </div>
 
-  <div>
-    <h4>About this video:</h4>
-    <div><%= @video.description %></div>
-    <div><%= @video.tags %></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="<%= @video.embedded_link %>" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Description:</h4>
+      <div><%= @video.description %></div>
+    </div>
   </div>
 
 </div>
