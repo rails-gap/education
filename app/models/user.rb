@@ -5,6 +5,13 @@ class User < ActiveRecord::Base
     :recoverable, :rememberable, :trackable, :validatable,
     :omniauthable, omniauth_providers: [:google_oauth2]
 
+  GAP_EMAIL_REGEX = /\A[A-Z0-9a-z]+@(growthaccelerationpartners|wearegap)\.com\z/
+
+  validates :email, format: {
+    with: GAP_EMAIL_REGEX,
+    message: "has invalid GAP account"
+  }
+
   def password_required?
     new_record? ? false : super
   end
