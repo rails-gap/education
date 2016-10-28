@@ -5,16 +5,15 @@ rescue Errno::ENOENT, Psych::SyntaxError
   Rails.logger.error 'An error occured while loading omniauth.yml'
 end
 OMNIAUTH_KEYS ||= {}
+CLIENT_ID = ENV['GOOGLE_CLIENT_ID'] || OMNIAUTH_KEYS['GOOGLE_CLIENT_ID']
+CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET'] || OMNIAUTH_KEYS['GOOGLE_CLIENT_SECRET']
 
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
-  config.omniauth :google_oauth2,
-    OMNIAUTH_KEYS['GOOGLE_CLIENT_ID'],
-    OMNIAUTH_KEYS['GOOGLE_CLIENT_SECRET'],
-    { prompt: 'select_account' } if OMNIAUTH_KEYS.any?
+  config.omniauth :google_oauth2, CLIENT_ID, CLIENT_SECRET, { prompt: 'select_account' }
 
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
