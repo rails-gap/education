@@ -52,6 +52,11 @@ gem 'searchkick'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'mysql2', '>= 0.3.13', '< 0.5'
   gem 'byebug'
