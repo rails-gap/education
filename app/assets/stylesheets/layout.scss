@@ -17,12 +17,20 @@ a {
   }
 }
 
+// Breadcrumbs
+ol.breadcrumb {
+  background-color: #EEE;
+}
+
 // Alerts
 div.alert {
   margin: 0px;
 }
 
 // Header
+header.nav-header .navbar {
+  background-color: #EEE;
+}
 header.nav-header .navbar-brand {
   height: 80px;
 }
