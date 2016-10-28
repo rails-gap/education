@@ -15,7 +15,7 @@ class AuthenticationController < Devise::OmniauthCallbacksController
   end
 
   def find_user_by_provider
-    User.where(provider: auth.provider, uid: auth.uid).first_or_create
+    User.where(provider: auth.provider, uid: auth.uid, email: auth.info.email).first_or_create
   end
 
   def find_user_by_email
