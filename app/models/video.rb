@@ -4,6 +4,10 @@ class Video < ActiveRecord::Base
 
   self.per_page = 12
 
+  def self.search(search_terms)
+    active.where('title LIKE ?', "%#{search_terms}%")
+  end
+
   def thumbnail
     "http://img.youtube.com/vi/#{video_id}/hqdefault.jpg"
   end

@@ -12,7 +12,6 @@ CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET'] || OMNIAUTH_KEYS['GOOGLE_CLIENT_SECR
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
 
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development?
   config.omniauth :google_oauth2, CLIENT_ID, CLIENT_SECRET, { prompt: 'select_account' }
 
   # The secret key used by Devise. Devise uses this key to generate
