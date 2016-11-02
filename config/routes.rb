@@ -3,7 +3,11 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :videos, only: [:index, :show]
+  resources :videos, only: [:index, :show] do
+    collection do
+      get :autocomplete_video_title
+    end
+  end
 
   namespace :admin do
     resources :users, only: [:index, :edit, :update]

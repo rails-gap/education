@@ -36,14 +36,13 @@ gem 'royce'
 # UI
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails'
-gem 'bootstrap-typeahead-rails'
 
 
 # Utils
 gem 'breadcrumbs_on_rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem 'searchkick'
+gem 'rails-jquery-autocomplete'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

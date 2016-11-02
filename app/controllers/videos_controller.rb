@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+  autocomplete :video, :title, full: true
+
   add_breadcrumb 'Videos', :videos_path
 
   before_action :authenticate_user!
