@@ -8,7 +8,7 @@
       <%= form_tag videos_path, method: 'GET', id: 'search-form', class: 'navbar-form' do %>
         <div class="input-group pull-right">
           <%= search_field_tag :search, params[:search],
-            size: 30, maxlength: 50, class: 'form-control', placeholder: 'Search',
+            size: 35, maxlength: 50, class: 'form-control', placeholder: 'Search',
             data: { autocomplete: autocomplete_video_title_videos_path } %>
           <div class="input-group-btn">
             <%= button_tag type: 'submit', class: 'btn btn-default' do %>
