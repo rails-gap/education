@@ -1,4 +1,4 @@
-<div class="video-box">
+<div class="video-box img-rounded">
   <div class="video-thumbnail">
     <%= link_to video_path(video) do %>
       <%= image_tag(video.thumbnail, class: 'img-responsive img-rounded') %>
@@ -10,7 +10,8 @@
         <%= video.title %>
       <% end %>
     </h4>
-    <div class="video-presenter"><%= video.presenter %></div>
-    <div class="video-presenter"><%= video.year %></div>
+    <div>
+      <i class="glyphicon glyphicon-calendar"></i> <%= video.short_date %>
+    </div>
   </div>
 </div>

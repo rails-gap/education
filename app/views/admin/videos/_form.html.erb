@@ -9,21 +9,18 @@
       <%= f.label :link, class: 'control-label' %>
       <%= f.text_field :link, class: 'form-control' %>
     </div>
-    <div class="row">
-      <div class="form-group col-md-8">
-        <%= f.label :presenter, class: 'control-label' %>
-        <%= f.text_field :presenter, class: 'form-control' %>
-      </div>
-       <div class="form-group col-md-4">
-        <%= f.label :year, class: 'control-label' %>
-        <%= f.text_field :year, class: 'form-control' %>
-      </div>
+    <div class="form-group">
+      <%= f.label :presenter, class: 'control-label' %>
+      <%= f.text_field :presenter, class: 'form-control' %>
     </div>
     <div class="form-group">
       <%= f.label :description, class: 'control-label' %>
       <%= f.text_area :description, class: 'form-control' %>
     </div>
-
+     <div class="form-group">
+      <%= f.label :date, class: 'control-label' %>
+      <%= f.date_select :date, class: 'form-control' %>
+    </div>
     <div class="form-group">
       <%= f.check_box :active %>
       <%= f.label :active, class: 'control-label' %>

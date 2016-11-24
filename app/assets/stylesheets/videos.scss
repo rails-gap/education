@@ -3,9 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .video-box {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  background-color: #EEE;
+  padding: 10px;
 }
 
-.video-presenter {
-  margin-right: 20px;
+.video-box .video-title {
+  height: 42px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }

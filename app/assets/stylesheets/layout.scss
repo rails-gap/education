@@ -1,9 +1,17 @@
 html, body {
   height: 100%;
+  min-height: 100%;
 }
 
-div.page {
-  min-height: 80%;
+body {
+  background: none;
+}
+
+.lines {
+  border-bottom: 6px solid transparent;
+  border-image: linear-gradient(to right, rgb(107, 77, 144) 25%, rgb(247, 156, 29) 25%,
+    rgb(247, 156, 29) 50%, rgb(19, 101, 139) 50%, rgb(19, 101, 139) 75%, rgb(32, 161, 116) 75%,
+    rgb(32, 161, 116) 100%) 1 1 1 1;
 }
 
 a {
@@ -19,43 +27,16 @@ a {
 
 // Breadcrumbs
 ol.breadcrumb {
+  margin-top: 20px;
   background-color: #EEE;
 }
 
 // Alerts
 div.alert {
   margin: 0px;
+  border-radius: 0px;
 }
 
-// Header
-header.nav-header .navbar {
-  background-color: #EEE;
+.title {
+  color: #00ADFF;
 }
-header.nav-header .navbar-brand {
-  height: 80px;
-}
-header.nav-header .nav > li > a {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-header.nav-header .navbar-toggle {
-  padding: 10px;
-  margin: 25px 15px 25px 0;
-}
-header.nav-header .navbar-brand {
-  display: flex;
-  align-items: center;
-}
-header.nav-header .navbar-brand > img {
-  padding: 7px 14px;
-}
-
-// Footer
-footer.footer {
-  height: 100px;
-  color: #FFF;
-  background-color: $blue;
-  padding: 45px;
-  margin-top: 20px;
-}
-

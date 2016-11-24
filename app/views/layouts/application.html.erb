@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:page_title) ? (yield :page_title) : 'EDU-PORTAL' %></title>
+    <title><%= content_for?(:page_title) ? (yield :page_title) : 'GAP Education Portal' %></title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= yield(:css_include) %>
     <%= csrf_meta_tags %>
@@ -9,6 +9,11 @@
     <%= yield(:js_include) %>
   </head>
   <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="lines"></div>
+      </div>
+    </div>
     <%= render 'shared/messages', flash: flash %>
     <%= render 'shared/navbar' %>
     <div class="page">

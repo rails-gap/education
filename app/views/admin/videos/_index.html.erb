@@ -4,7 +4,7 @@
       <th>Title</th>
       <th>Link</th>
       <th>Presenter</th>
-      <th>Year</th>
+      <th>Date</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
       <td><%= link_to video.title, video_path(video) %></td>
       <td><%= video.link %></td>
       <td><%= video.presenter %></td>
-      <td><%= video.year %></td>
+      <td><%= video.date %></td>
       <td>
         <%= link_to edit_admin_video_path(video), remote: true,
           class: 'btn btn-default btn-sm' do %>

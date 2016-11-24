@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GAP Education Portal</title>
+    <%= stylesheet_link_tag 'signout', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+  <body>
+    <%= render 'shared/messages', flash: flash %>
+    <%= yield %>
+  </body>
+</html>

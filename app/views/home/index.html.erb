@@ -1,12 +1,5 @@
-<header class="landing">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="intro-text">
-        <span class="title">Welcome to Education <strong>Portal!</strong></span>
-        <span class="description">
-          Here you will find information and resources to improve your skills and knowledge.
-        </span>
-      </div>
-    </div>
-  </div>
-</header>
+<% if user_signed_in? %>
+  <%= render 'home' %>
+<% else %>
+  <%= render 'signout' %>
+<% end %>

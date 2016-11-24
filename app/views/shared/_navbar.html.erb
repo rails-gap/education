@@ -1,5 +1,5 @@
 <header class="nav-header">
-  <nav class="navbar navbar-default">
+  <nav id="navbar-top" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -10,20 +10,16 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to(root_path, class: 'navbar-brand') do %>
-          <%= image_tag('gap-logo.png', alt: 'logo', class: 'logo') %>
+          <%= image_tag('logo-header.png', alt: 'logo', class: 'logo') %>
         <% end %>
       </div>
       <div id="eduportal-menu" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <% if user_signed_in? %>
-            <li><%= link_to('Videos', videos_path) %></li>
-          <% end %>
-        </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false">
+                <%= image_tag(current_user.picture, alt: 'picture', class: 'user-img img-circle') %>
                 <%= current_user.name %> <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
@@ -40,6 +36,17 @@
             <li><%= link_to('Sign In', user_omniauth_authorize_path(:google_oauth2)) %></li>
           <% end %>
         </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="navbar-menu" class="navbar navbar-default">
+    <div class="container">
+      <div class="">
+        <% if user_signed_in? %>
+          <ul class="nav nav-pills">
+            <li><%= link_to('Videos', videos_path) %></li>
+          </ul>
+        <% end %>
       </div>
     </div>
   </nav>

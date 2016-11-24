@@ -7,7 +7,9 @@ class Admin::VideosController < ApplicationController
   private
 
   def entity_parameters
-    params.require(:video).permit(:title, :link, :description, :presenter, :active, :tags, :year)
+    params
+      .require(:video)
+      .permit(:title, :link, :description, :presenter, :active, :tags, :year, :date)
   end
 
   def load_entity_object_by_id

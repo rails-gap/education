@@ -16,6 +16,10 @@ class Video < ActiveRecord::Base
     link.gsub!('watch?v=', 'embed/')
   end
 
+  def short_date
+    date.strftime('%B, %Y')
+  end
+
   private
 
   def video_id

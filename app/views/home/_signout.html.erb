@@ -1,0 +1,27 @@
+<div id="signout-page" class="container-fluid">
+  <div class="row">
+    <div class="lines"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 bgimage">
+      <div class="container text-center">
+        <div class="row">
+          <%= image_tag('logo.png', alt: 'logo', class: 'logo image-responsive') %>
+        </div>
+        <div class="row">
+          <%= image_tag('welcome-text.png', alt: 'logo', class: 'text1 image-responsive') %>
+        </div>
+        <div class="row">
+          <%= image_tag('intro-text.png', alt: 'logo', class: 'text2 image-responsive') %>
+        </div>
+        <div class="row">
+          <%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
+            <%= image_tag('signin-btn.png', class: 'image-responsive',
+                onMouseover: "this.src='/assets/signin-btn-hover.png';",
+                onMouseout: "this.src='/assets/signin-btn.png';") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

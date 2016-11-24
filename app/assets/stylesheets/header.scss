@@ -1,0 +1,54 @@
+
+// Header
+#navbar-top {
+  background-color: $blue;
+  border: 0px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+#navbar-top .navbar-brand {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+#navbar-top .navbar-nav > li > a {
+  color: #FFF;
+}
+#navbar-top .navbar-nav > .open > a,
+#navbar-top .navbar-nav > .open > a:hover,
+#navbar-top .navbar-nav > .open > a:focus {
+  background-color: $blue;
+}
+
+#navbar-top .navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+#navbar-top .user-img {
+  margin-right: 10px;
+}
+
+// Menu
+#navbar-menu {
+  background-color: #CCC;
+  border: 0px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+#navbar-menu .nav  {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+// Footer
+footer.footer {
+  height: 120px;
+  color: #FFF;
+  background-color: $blue;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+footer.footer .logo {
+
+}

@@ -1,0 +1,30 @@
+// Includes
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "colors";
+@import "layout";
+
+body {
+  background: url('background.png') no-repeat center center;
+  background-size: cover;
+}
+
+#signout-page .logo {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+#signout-page .text1 {
+  margin-bottom: 50px;
+}
+
+#signout-page .text2 {
+  margin-bottom: 50px;
+}
+
+#signout-page .signin-btn {
+  background: url('signin-btn.png');
+}
+#signout-page .signin-btn:hover {
+  background: url('signin-btn-hover.png');
+}

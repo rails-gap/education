@@ -11,6 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 # CSS
+Rails.application.config.assets.precompile += %w(signout.scss)
 Rails.application.config.assets.precompile += %w(jquery.dataTables.min.css)
 
 # JS
