@@ -17,7 +17,7 @@ class Video < ActiveRecord::Base
   end
 
   def short_date
-    date.strftime('%B, %Y')
+    date ? date.strftime('%B, %Y') : 'No date'
   end
 
   private
