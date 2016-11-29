@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+  def page_title
+    name = controller.class.to_s.sub('Controller', '').tr('::', ' ')
+    "GAP Education - #{name}"
+  end
+
   def bootstrap_class_for(flash_type)
     {
       success: 'alert-success',

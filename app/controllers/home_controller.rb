@@ -2,7 +2,8 @@ class HomeController < ApplicationController
   layout :home_layout, only: [:index]
 
   def index
-    @videos = Video.all.sample(3)
+    @recent_videos = Video.all.last(3)
+    @more_videos = Video.all.sample(3)
   end
 
   private

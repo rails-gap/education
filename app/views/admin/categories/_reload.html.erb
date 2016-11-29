@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if category.errors.any? %>
+  <% category.errors.full_messages.each do |message| %>
+    $("div.errors").append($("<div class='alert alert-danger'/>").html("<%= message.html_safe %>"));
+  <% end %>
+<% else %>
+  $("#categories-content").html("<%= escape_javascript(render 'index', categories: categories ) %>");
+  $("#categories-modal").modal("hide");
+<% end %>

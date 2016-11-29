@@ -17,7 +17,24 @@
       <%= f.label :description, class: 'control-label' %>
       <%= f.text_area :description, class: 'form-control' %>
     </div>
-     <div class="form-group">
+    <div class="row">
+      <div class="form-group col-sm-4">
+        <%= f.label :level, class: 'control-label' %>
+        <% level_options = ['Beginner', 'Intermediate', 'Advanced'] %>
+        <%= f.select :level, level_options, {}, { class: 'form-control' } %>
+      </div>
+      <div class="form-group col-sm-4">
+        <%= f.label :category_id, class: 'control-label' %>
+        <%= f.collection_select(:category_id, categories, :id, :name,
+          { include_blank: true }, { class: 'form-control' }) %>
+      </div>
+      <div class="form-group col-sm-4">
+        <%= f.label :event_id, class: 'control-label' %>
+        <%= f.collection_select(:event_id, events, :id, :name,
+          { include_blank: true }, { class: 'form-control' }) %>
+      </div>
+    </div>
+    <div class="form-group">
       <%= f.label :date, class: 'control-label' %>
       <%= f.date_select :date, class: 'form-control' %>
     </div>

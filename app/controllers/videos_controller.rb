@@ -4,6 +4,7 @@ class VideosController < ApplicationController
   add_breadcrumb 'Videos', :videos_path
 
   before_action :authenticate_user!
+  before_filter :set_active_page, only: [:index, :show]
 
   def index
     @videos = params[:search] ? load_search_videos : load_all_videos
@@ -22,6 +23,10 @@ class VideosController < ApplicationController
 
   def load_search_videos
     Video.search(params[:search]).paginate(page: params[:page])
+  end
+
+  def set_active_page
+    @active_page = 'videos'
   end
 
 end

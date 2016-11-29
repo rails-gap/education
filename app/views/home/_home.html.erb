@@ -10,11 +10,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="title">Sample Videos</h1>
+      <h1 class="title">Recent Videos</h1>
     </div>
   </div>
   <div class="row">
-    <% @videos.each do |video| %>
+    <% @recent_videos.each do |video| %>
       <div class="col-sm-4">
         <%= render 'videos/video', video: video %>
       </div>
@@ -22,7 +22,14 @@
   </div>
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="title">More things coming soon...</h1>
+      <h1 class="title">More videos</h1>
     </div>
+  </div>
+  <div class="row">
+    <% @more_videos.each do |video| %>
+      <div class="col-sm-4">
+        <%= render 'videos/video', video: video %>
+      </div>
+    <% end %>
   </div>
 </div>

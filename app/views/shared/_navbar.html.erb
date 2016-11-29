@@ -10,7 +10,7 @@
           <span class="icon-bar"></span>
         </button>
         <%= link_to(root_path, class: 'navbar-brand') do %>
-          <%= image_tag('logo-header.png', alt: 'logo', class: 'logo') %>
+          <%= image_tag('logo-header.png', alt: 'logo', class: 'img-responsive logo') %>
         <% end %>
       </div>
       <div id="eduportal-menu" class="navbar-collapse collapse">
@@ -43,8 +43,10 @@
     <div class="container">
       <div class="">
         <% if user_signed_in? %>
-          <ul class="nav nav-pills">
-            <li><%= link_to('Videos', videos_path) %></li>
+          <ul class="nav navbar-nav">
+            <li class="<%= 'active' if @active_page == 'videos' %>">
+              <%= link_to('Videos', videos_path) %>
+            </li>
           </ul>
         <% end %>
       </div>

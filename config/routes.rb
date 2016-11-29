@@ -14,6 +14,12 @@ Rails.application.routes.draw do
     resources :videos do
       get 'delete'
     end
+    resources :categories do
+      get 'delete'
+    end
+    resources :events do
+      get 'delete'
+    end
   end
 
 end

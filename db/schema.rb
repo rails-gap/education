@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161124045856) do
+ActiveRecord::Schema.define(version: 20161129055206) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",    null: false
@@ -49,6 +61,14 @@ ActiveRecord::Schema.define(version: 20161124045856) do
     t.datetime "updated_at",                               null: false
     t.string   "year",        limit: 255
     t.date     "date"
+    t.integer  "category_id", limit: 4
+    t.integer  "event_id",    limit: 4
+    t.string   "level",       limit: 255
   end
 
+  add_index "videos", ["category_id"], name: "fk_rails_edd73071b6", using: :btree
+  add_index "videos", ["event_id"], name: "fk_rails_7ebce950d2", using: :btree
+
+  add_foreign_key "videos", "categories"
+  add_foreign_key "videos", "events"
 end

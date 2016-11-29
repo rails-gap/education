@@ -1,0 +1,3 @@
+$("#events-modal-content")
+  .html("<%= escape_javascript(render 'new', event: @entity_object) %>");
+$("#events-modal").modal();

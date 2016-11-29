@@ -1,0 +1,23 @@
+<%= render 'admin/shared/header', selected: 'events' %>
+
+<div class="container">
+  <h2>
+    <span>Events</span>
+    <span>
+      <%= link_to new_admin_event_path, remote: true, class: 'btn btn-primary pull-right' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Event
+      <% end %>
+    </span>
+  </h2>
+
+  <div id="events-content">
+    <%= render 'index', events: @all_entity_objects %>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="events-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div id="events-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<%= render 'admin/shared/header', selected: 'categories' %>
+
+<div class="container">
+  <h2>
+    <span>Categories</span>
+    <span>
+      <%= link_to new_admin_category_path, remote: true, class: 'btn btn-primary pull-right' do %>
+        <span class="glyphicon glyphicon-plus"></span> New Category
+      <% end %>
+    </span>
+  </h2>
+
+  <div id="categories-content">
+    <%= render 'index', categories: @all_entity_objects %>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="categories-modal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div id="categories-modal-content" class="modal-content"></div>
+    </div>
+  </div>
+</div>

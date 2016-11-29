@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:page_title) ? (yield :page_title) : 'GAP Education Portal' %></title>
+    <title><%= page_title %></title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= yield(:css_include) %>
     <%= csrf_meta_tags %>

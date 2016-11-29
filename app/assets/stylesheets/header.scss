@@ -36,8 +36,9 @@
   margin-bottom: 0px;
 }
 #navbar-menu .nav  {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 // Footer
@@ -47,8 +48,4 @@ footer.footer {
   background-color: $blue;
   padding: 30px;
   margin-top: 20px;
-}
-
-footer.footer .logo {
-
 }

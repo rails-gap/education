@@ -1,0 +1,3 @@
+$("#categories-modal-content")
+  .html("<%= escape_javascript(render 'edit', category: @entity_object) %>");
+$("#categories-modal").modal();

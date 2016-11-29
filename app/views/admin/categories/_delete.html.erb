@@ -1,0 +1,13 @@
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  <h4 class="modal-title">Delete Category</h4>
+</div>
+<div class="modal-body">
+  <ul class="errors"></ul>
+  Are you sure that you want to delete: <b><%= category.name %></b>?
+</div>
+<div class="modal-footer">
+  <%= link_to 'Cancel', '#', class: 'btn btn-default', data: { dismiss: 'modal' } %>
+  <%= link_to 'Delete Category', admin_category_path(category), method: :delete, remote: true,
+    class: 'btn btn-danger' %>
+</div>

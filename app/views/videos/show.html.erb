@@ -1,16 +1,9 @@
-
-<div class="container">
-  <ol class="breadcrumb"><%= render_breadcrumbs tag: :li, separator: '' %></ol>
+<div id="video-page" class="container">
+  <%= render 'video_top' %>
 
   <div class="row">
     <div class="col-md-12">
-      <h4>
-        <span class="title"><%= @video.title %></span>
-        <div class="pull-right">
-          <i class="glyphicon glyphicon-calendar"></i>
-          <span><%= @video.short_date %></span>
-        </div>
-      </h4>
+      <h3 class="title"><%= @video.title %></h3>
     </div>
   </div>
 
@@ -23,15 +16,32 @@
   </div>
 
   <div class="row">
-    <div class="col-md-12">
-      <h4>Presented by: <%= @video.presenter %></h4>
+    <div class="col-sm-6">
+      <h4>
+        <i class="glyphicon glyphicon-user"></i>
+         <span><%= @video.presenter %></span>
+      </h4>
+    </div>
+    <div class="col-sm-6">
+      <h4 class="pull-right">
+        <i class="glyphicon glyphicon-calendar"></i>
+        <span><%= @video.short_date %></span>
+      </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <span>#<%= @video.category.name if @video.category %></span>
+      <span>#<%= @video.event.name if @video.event %></span>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-12">
-      <h4>Description:</h4>
-      <div><%= @video.description %></div>
+      <div class="well">
+        <%= @video.description %>
+      </div>
     </div>
   </div>
 
