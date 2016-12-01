@@ -15,11 +15,11 @@ body {
 }
 
 a {
-  color: #0079C2;
+  color: $link;
   text-decoration: none;
   outline: 0 none;
   &:focus, &:hover, &:active {
-    color: #4E9DFF;
+    color: $link-hover;
     text-decoration: none;
     outline: 0 none;
   }
@@ -38,5 +38,6 @@ div.alert {
 }
 
 .title {
-  color: #00ADFF;
+  color: $titles;
+  display: inline-block;
 }
