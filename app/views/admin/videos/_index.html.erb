@@ -10,7 +10,7 @@
   </thead>
   <% videos.each do |video| %>
     <tr class="<%= 'warning' unless video.active %>">
-      <td><%= link_to video.title, video_path(video) %></td>
+      <td><%= video.title %></td>
       <td><%= video.link %></td>
       <td><%= video.presenter %></td>
       <td><%= video.date %></td>
