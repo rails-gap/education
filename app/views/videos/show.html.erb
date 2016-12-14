@@ -31,16 +31,16 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12">
-      <span>#<%= @video.category.name if @video.category %></span>
-      <span>#<%= @video.event.name if @video.event %></span>
-    </div>
-  </div>
-
-  <div class="row">
     <div class="col-md-12">
       <div class="well">
-        <%= @video.description %>
+        <div class="row">
+          <div class="col-sm-4"><h5>Category: <%= @video.category.name if @video.category %></h5></div>
+          <div class="col-sm-4 text-center"><h5>Event: <%= @video.event.name if @video.event %></h5></div>
+          <div class="col-sm-4 text-right"><h5>Level: <%= @video.level %></h5></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12"><%= @video.description %></div>
+        </div>
       </div>
     </div>
   </div>

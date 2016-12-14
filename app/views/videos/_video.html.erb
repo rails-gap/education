@@ -1,7 +1,10 @@
-<div class="video-box img-rounded">
-  <div class="video-thumbnail">
+<div class="video-box">
+  <div class="video-image">
+    <%= image_tag(video.thumbnail, class: 'video-thumbnail img-responsive') %>
     <%= link_to video_path(video) do %>
-      <%= image_tag(video.thumbnail, class: 'img-responsive img-rounded') %>
+      <div class="video-play">
+        <%= image_tag('play-button.png', alt: 'play button', class: 'video-play-button') %>
+      </div>
     <% end %>
   </div>
   <div class="video-info">

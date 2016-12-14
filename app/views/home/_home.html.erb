@@ -2,7 +2,9 @@
 <div id="welcome-header" class="container-fluid">
   <div class="container text-center">
     <div class="row">
-      <%= image_tag('intro-text.png', alt: 'logo', class: 'text1 image-responsive') %>
+      <div class="col-sm-12">
+        <%= image_tag('intro-text.png', alt: 'logo', class: 'text1 image-responsive') %>
+      </div>
     </div>
   </div>
 </div>
@@ -19,7 +21,7 @@
   </div>
   <div class="row">
     <% @recent_videos.each do |video| %>
-      <div class="col-sm-4">
+      <div class="col-sm-6 col-md-6 col-lg-4">
         <%= render 'videos/video', video: video %>
       </div>
     <% end %>
@@ -35,7 +37,7 @@
   </div>
   <div class="row">
     <% @more_videos.each do |video| %>
-      <div class="col-sm-4">
+      <div class="col-sm-6 col-md-6 col-lg-4">
         <%= render 'videos/video', video: video %>
       </div>
     <% end %>
