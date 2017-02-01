@@ -51,11 +51,17 @@ gem 'rails-jquery-autocomplete'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+group :development do
+  gem 'capistrano', '~> 3.5'
+  gem 'capistrano-rails', '~> 1.1', '>= 1.1.7'
+  gem 'capistrano-rvm', '~> 0.1.2'
+  gem 'capistrano-bundler', '~> 1.1', '>= 1.1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+end
 
 group :production do
   gem 'pg'
-  # gem 'rails_12factor'
+  # gem 'rails_12factor' # Use only for heroku, avoid in production server
 end
 
 group :development, :test do
