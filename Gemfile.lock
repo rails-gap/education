@@ -195,11 +195,6 @@ GEM
       rails (>= 3.2)
     rails4-autocomplete (1.1.1)
       rails (>= 3.0)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (4.2.7.1)
       actionpack (= 4.2.7.1)
       activesupport (= 4.2.7.1)
@@ -335,7 +330,6 @@ DEPENDENCIES
   rails (= 4.2.7.1)
   rails-jquery-autocomplete
   rails4-autocomplete
-  rails_12factor
   royce
   rspec-rails (~> 3.0)
   rubocop (~> 0.42.0)
