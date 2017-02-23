@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'authentication' }
 
-  root 'home#index'
+  devise_scope :user do
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+
+    authenticated do
+      root 'videos#index'
+    end
+  end
 
   resources :videos, only: [:index, :show] do
     collection do

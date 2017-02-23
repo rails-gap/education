@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GAP Education Portal</title>
-    <%= stylesheet_link_tag 'signout', media: 'all', 'data-turbolinks-track' => true %>
+    <title><%= I18n.t('title') %></title>
+    <%= stylesheet_link_tag 'application-login', media: 'all', 'data-turbolinks-track' => true %>
+    <%= yield(:css_include) %>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= yield(:js_include) %>
   </head>
   <body>
     <%= render 'shared/messages', flash: flash %>

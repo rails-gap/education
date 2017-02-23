@@ -1,7 +1,7 @@
 class AuthenticationController < Devise::OmniauthCallbacksController
 
   def google_oauth2
-    valid_user? ? authorize : no_authorize('Please sign in with your GAP account.')
+    valid_user? ? authorize : no_authorize(I18n.t('error.unauthorized'))
   end
 
   private
