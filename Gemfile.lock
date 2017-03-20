@@ -181,7 +181,6 @@ GEM
     parser (2.3.1.2)
       ast (~> 2.2)
     path_expander (1.0.0)
-    pg (0.19.0)
     powerpack (0.1.1)
     priscilla (1.0.3)
       colorize (~> 0.7)
@@ -354,7 +353,6 @@ DEPENDENCIES
   mysql2 (>= 0.3.13, < 0.5)
   omniauth
   omniauth-google-oauth2
-  pg
   priscilla
   pry
   quiet_assets
@@ -377,4 +375,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.13.3
+   1.14.3
